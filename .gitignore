@@ -1,0 +1,14 @@
+.venv*/
+data/
+__pycache__/
+*.py[cod]
+.idea/
+.env
+.env.*
+outputs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+.cache/
+/training_collection_review.zip

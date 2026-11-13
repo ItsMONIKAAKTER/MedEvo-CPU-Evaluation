@@ -4,6 +4,10 @@ A reproducible evaluation project for a CPU-based adaptation of **MedEvo: Medica
 
 This is an independent implementation. It does not contain the authors' MedEvo weights or reproduce their published scores.
 
+![Animated CPU evaluation workflow](docs/media/medevo-cpu-workflow.gif)
+
+The evaluator sends a VQA-RAD or SLAKE image and question to a vision-language model on CPU, scores the final boxed answer by strict exact match, and saves predictions, metrics, coverage, and timing.
+
 ## Project status
 
 Phase 2 provides data preparation, split checks, baseline inference and answer scoring. The original [CPU feasibility checks](docs/feasibility.md) remain available. Data preparation has been checked against both pinned dataset releases. Development inference has been checked separately from final evaluation; see [verification](docs/verification.md).

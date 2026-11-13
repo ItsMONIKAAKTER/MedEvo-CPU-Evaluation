@@ -1,0 +1,14 @@
+{
+  "verified_date": "2026-11-08",
+  "timezone": "Asia/Shanghai",
+  "environment": "Linux Python 3.12.14",
+  "tests_passed": 16,
+  "test_summary": "Ran 16 tests in 3.833s; OK",
+  "live_ollama_verified": false,
+  "medical_auditing_verified": false,
+  "sha256": {
+    "src/auditor.py": "f6c0a8c3dbe9399fbf658c553c514b00a0ad8a11806b1aef927ce592c97ee945",
+    "run_pilot.py": "05603bec054eb08764e4b51cabf2e3e7c289a9307a4138a40cd1d64caff7072f",
+    "tests/test_phase1.py": "9239f486191112adce7523e4c2ce3a8c6db2d6b0144313bbe213eeed428e3628"
+  }
+}

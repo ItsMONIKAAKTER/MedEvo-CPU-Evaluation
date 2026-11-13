@@ -1,0 +1,149 @@
+{
+  "prepared_date": "2026-11-08",
+  "timezone": "Asia/Shanghai",
+  "execution_platform": "Linux, not the user desktop",
+  "software_checks": {
+    "tests": 13,
+    "status": "passed"
+  },
+  "stages": {
+    "environment": {
+      "run_id": "20261107T163854Z_environment_1b9f1d",
+      "result": {
+        "status": "passed",
+        "python": "3.12.14",
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+        "packages": {
+          "torch": "2.15.0+cpu",
+          "torchvision": "0.29.2+cpu",
+          "transformers": "5.22.2",
+          "peft": "0.21.2",
+          "accelerate": "1.15.0",
+          "psutil": "7.2.2",
+          "Pillow": "13.0.0",
+          "huggingface-hub": "2.4.0",
+          "num2words": "0.5.14"
+        }
+      }
+    },
+    "inference": {
+      "run_id": "20261107T163713Z_inference_ebced3",
+      "result": {
+        "question": "Name the color and shape in this image. Answer in a few words.",
+        "raw_response": "The color is red and the shape is a circle.",
+        "model_weight_bytes": 2029929216,
+        "generated_tokens": 12,
+        "generation_seconds": 3.231,
+        "input_shapes": {
+          "input_ids": [
+            1,
+            90
+          ],
+          "attention_mask": [
+            1,
+            90
+          ],
+          "pixel_values": [
+            1,
+            1,
+            3,
+            512,
+            512
+          ],
+          "pixel_attention_mask": [
+            1,
+            1,
+            512,
+            512
+          ]
+        },
+        "answer_generated": true,
+        "benchmark_accuracy": null,
+        "status": "blocked",
+        "operation_checks": "passed",
+        "reason": "resource_measurement_unverified"
+      },
+      "resources": {
+        "worker_exit_code": 0,
+        "limit_reached": null,
+        "elapsed_seconds": 15.629,
+        "peak_process_tree_rss_bytes": null,
+        "peak_process_tree_rss_gib": null,
+        "memory_measurement_available": false,
+        "memory_sampling_seconds": 0.2,
+        "memory_measurement_plausible": false,
+        "warning": "Memory samples are unavailable or below the loaded model's weight size; verify process memory on the target PC"
+      }
+    },
+    "train": {
+      "run_id": "20261107T163729Z_train_0ab859",
+      "result": {
+        "loss_before_update": 1.0186247825622559,
+        "update_seconds": 3.172,
+        "trainable_parameters": 409600,
+        "changed_parameter_tensors": 128,
+        "frozen_parameter_sample": "base_model.model.model.vision_model.embeddings.patch_embedding.weight",
+        "frozen_parameter_sample_unchanged": true,
+        "model_weight_bytes": 2031567616,
+        "adapter_reload_passed": true,
+        "adapter_sha256": "2ad4994cf2e2fc4487b56d3c103a14192db46296f69c4a240c2cc0a835894954",
+        "supervised_tokens": 4,
+        "training_example": "synthetic red-circle fixture; not medical data",
+        "status": "blocked",
+        "operation_checks": "passed",
+        "reason": "resource_measurement_unverified"
+      },
+      "resources": {
+        "worker_exit_code": 0,
+        "limit_reached": null,
+        "elapsed_seconds": 26.614,
+        "peak_process_tree_rss_bytes": null,
+        "peak_process_tree_rss_gib": null,
+        "memory_measurement_available": false,
+        "memory_sampling_seconds": 0.2,
+        "memory_measurement_plausible": false,
+        "warning": "Memory samples are unavailable or below the loaded model's weight size; verify process memory on the target PC"
+      }
+    },
+    "auditor": {
+      "run_id": "20261107T163756Z_auditor_867a07",
+      "result": {
+        "status": "blocked",
+        "reason": "auditor_not_configured",
+        "next_action": "Set AUDITOR_BASE_URL and AUDITOR_MODEL for an approved image-capable service",
+        "worker": {
+          "worker_exit_code": 2,
+          "limit_reached": null,
+          "elapsed_seconds": 0.201,
+          "peak_process_tree_rss_bytes": null,
+          "peak_process_tree_rss_gib": null,
+          "memory_measurement_available": false,
+          "memory_sampling_seconds": 0.2,
+          "memory_measurement_plausible": false,
+          "warning": "Memory samples are unavailable or below the loaded model's weight size; verify process memory on the target PC"
+        }
+      },
+      "resources": {
+        "worker_exit_code": 2,
+        "limit_reached": null,
+        "elapsed_seconds": 0.201,
+        "peak_process_tree_rss_bytes": null,
+        "peak_process_tree_rss_gib": null,
+        "memory_measurement_available": false,
+        "memory_sampling_seconds": 0.2,
+        "memory_measurement_plausible": false,
+        "warning": "Memory samples are unavailable or below the loaded model's weight size; verify process memory on the target PC"
+      }
+    }
+  },
+  "source_sha256": {
+    "requirements.txt": "1f273c7c885620e23a83ce0aef4de7b3cb366097c74c6af0c56e8dd90413aac8",
+    "run_pilot.py": "427a371d0dce4f768f1c6a38ee9594223d7b2ca0a92054d856e41ef5c997b45c",
+    "settings.json": "8b4b2565876e809fddd5042c347c30d78d8d0279973ef9cf5d65e9817a232675",
+    "src/__init__.py": "ccc426eba9668fc93bc3f4edc20a9fb255434638168966d86d0478023bac8325",
+    "src/auditor.py": "80b91150fca2a2c94ffce64da80f749de9c3e2a90c71fc8c9a5b58c55da2b940",
+    "src/model.py": "479693ed10d125b37642a8421776e0f8177fc288bdaf1fa7678a36a7ed65b986",
+    "src/runtime.py": "45edfc2dbf21c28790d2ac6c4bc1014dfc3c9c4442dd4d0468706c602ea0e31f",
+    "tests/test_phase1.py": "117a1d91aa14250087f45af6a09d3d9706b2abf8805df83b5e92387a36c43d1e"
+  }
+}
